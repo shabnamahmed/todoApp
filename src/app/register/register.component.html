@@ -1,0 +1,57 @@
+<div class="container">
+
+    <img src='../../assets/login.webp' class="text-center d-block mx-auto img-responsive mx-auto">
+
+    <div class="row">
+        <div class="col">
+
+            <div class="row">
+                <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+                    <div class="card border-0 shadow rounded-3 my-2">
+                        <div class="card-body p-4 p-sm-5">
+                            <h5 class="card-title text-center mb-5 fw-bold fs-5">Register</h5>
+                            <form [formGroup]="form" #detail>
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" id="floatingInput" placeholder="asdf"
+                                        formControlName="username" required #username>
+                                    <label for="floatingInput">Username</label>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input type="email" class="form-control" id="floatingInput"
+                                        placeholder="name@example.com" formControlName="email" required #email>
+                                    <label for="floatingInput">Email address</label>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input type="password" class="form-control" id="floatingPassword"
+                                        placeholder="Password" formControlName="pwd" required #password>
+                                    <label for="floatingPassword">Password</label>
+                                </div>
+
+
+                                <div class="row ">
+                                    <div class="col col-sm-9 col-md-7 col-lg-5">
+                                        <button class="float-start btn btn-primary" type="submit"
+                                            (click)="goBack()">Sign
+                                            in</button>
+                                        <button class="float-end btn btn-primary btn-register" type="submit"
+                                            (click)="register(username.value,email.value,password.value)">Register
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="row form-group mt-4 mx-1" *ngIf="error">
+                                    <div class="alert alert-danger  fade show" role="alert">
+                                        <strong>{{msg}}</strong>
+                                        <button type="button" class="close" aria-label="Close">
+                                            <span aria-hidden="true" (click)="close()">&times;</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

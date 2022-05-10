@@ -1,0 +1,63 @@
+<div class="container">
+
+    <img src='../../assets/login.webp' class="text-center d-block mx-auto img-responsive mx-auto">
+
+    <div class="row">
+        <div class="col">
+            <form>
+                <div class="row">
+                    <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+                        <div class="card border-0 shadow rounded-3 my-2">
+                            <div class="card-body p-4 p-sm-5">
+                                <h5 class="card-title text-center mb-5 fw-bold fs-5">Sign In</h5>
+                                <form [formGroup]="form" class="example-form">
+                                    <div class="form-floating mb-3">
+                                        <input type="email" class="form-control" id="floatingInput"
+                                            placeholder="name@example.com" formControlName="email" required>
+                                        <label for="floatingInput">Email address</label>
+                                        <!-- <div *ngIf="f.email.touched && f.email.invalid" class="mt-2 text-danger">
+                                            <div *ngIf="f.email.errors?.required">Email is required.</div>
+                                        </div> -->
+                                    </div>
+                                    <div class="form-floating mb-3">
+                                        <input type="password" class="form-control" id="floatingPassword"
+                                            formControlName="pwd" placeholder="Password" required>
+                                        <label for="floatingPassword">Password</label>
+                                    </div>
+
+                                    <div class="form-check mb-3">
+                                        <input class="form-check-input" type="checkbox" value=""
+                                            id="rememberPasswordCheck">
+                                        <label class="form-check-label" for="rememberPasswordCheck">
+                                            Remember password
+                                        </label>
+                                    </div>
+                                    <div class="row justify-content-evenly">
+                                        <div class="col">
+                                            <button class="float-start btn btn-primary" type="submit"
+                                                (click)="signIn()">Sign
+                                                in</button>
+                                            <button class="float-end btn btn-primary btn-register ms-5"
+                                                (click)="goToRegister()" type="button">Register
+                                            </button>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="row form-group mt-4 mx-1">
+                                        <div class="alert alert-danger  fade show" role="alert" *ngIf="error">
+                                            <strong>{{msg}}</strong>
+                                            <button type="button" class="close" aria-label="Close">
+                                                <span aria-hidden="true" (click)="close()">&times;</span>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>

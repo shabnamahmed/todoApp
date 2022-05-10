@@ -1,0 +1,11 @@
+.toDo,
+.inProgress,
+.done {
+    border-radius: 0.4rem;
+    padding-left: 0.33rem;
+    padding-right: 0.33rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    color: white;
+    margin-top: 0.4rem;
+}
